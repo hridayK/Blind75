@@ -1,5 +1,8 @@
 package Sandbox;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Main {
     public static void main(String args[]){
         TreeNode t1 = new TreeNode(1, 
@@ -24,10 +27,25 @@ public class Main {
                                         new TreeNode(3)
                                         );
         */
-        System.out.println(max(t1));
-        System.out.println(min(t1));
+        // System.out.println(max(t1));
+        // System.out.println(min(t1));
         
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(1);
+        queue.add(1);
+        queue.add(1);
+
+        System.out.println(queue);
+
+        int x = queue.remove();
+        System.out.println(x);
+
+        System.out.println(queue);
     }
+
+    // public void levelOrder(TreeNode root){
+    //     Queue<TreeNode> queue = new LinkedList<>();
+    // }
 
     public static int max(TreeNode root){
         if(root==null){
